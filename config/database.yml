@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: git_compete_development
+  pool: 5
+  host: localhost
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: git_compete_test
+  pool: 5
+cucumber:
+  <<: *test

@@ -1,18 +1,16 @@
 class UsersController < ApplicationController
   
-  def index
-    @users = []
-  end
+  def index;end
 
   def fetch
-    @users = [data_fetch(params["user_1"]), data_fetch(params["user_2"])]
+    @users = [ 
+      User.new(params["user_1"]), 
+      User.new(params["user_2"]) 
+    ]
+    
     respond_to do |format|
       format.js
     end
-  end
-
-  def data_fetch(username)
-    return User.new(username)
   end
 
 end

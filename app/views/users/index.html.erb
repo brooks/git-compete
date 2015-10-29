@@ -1,0 +1,17 @@
+<div class='container'>
+  <h1>Git Compete
+    <small>enter github handle for each competitor</small>
+  </h1>
+  <%= form_tag(fetch_users_path, :method => :post, id: 'fetch-users-form', remote: true) do %>
+    <div class='form-group'>
+      <%= text_field_tag :user_1 %>
+      <%= text_field_tag :user_2 %>
+      <%= submit_tag('Start!', :class => 'btn btn-primary') %>     
+    </div>
+  <% end %>
+
+  <div id='git-compare' class='row'>
+  
+  </div>
+
+</div>

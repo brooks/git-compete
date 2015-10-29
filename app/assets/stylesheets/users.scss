@@ -1,0 +1,24 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#repos-container {
+  height: 400px;
+  overflow: auto;
+}
+
+.tie {
+  color: #f37735;
+}
+
+.winner {
+  color: #00b159;
+}
+
+.loser {
+  color: #d11141;
+}
+
+input {
+  margin-bottom: 10px;
+}

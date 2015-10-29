@@ -1,0 +1,17 @@
+<h4><small>REPOSITORIES</small></h4>
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Stars</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% repos.sort { |a,b| b.stars <=> a.stars }.each do |repo| %>
+      <tr>
+        <td><%= repo.name %></td>
+        <td><%= repo.stars %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

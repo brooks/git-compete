@@ -1,0 +1,11 @@
+<% users.each_with_index do |user, i| %>
+
+  <div class="col-md-6">
+    <% if user.error_message %>
+      <%= render partial: 'user_error', object: user %>
+    <% else %>
+      <%= render partial: 'user', object: user, locals: {competitor: users[i-1] } %>
+    <% end %>
+  </div>
+
+<% end %>

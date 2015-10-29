@@ -1,0 +1,8 @@
+<h2><%= user.name %> <small class=<%= user.status(competitor) %>><%= user.status(competitor).upcase %> </small></h1>
+
+<h4>Total Stars: <small><%= user.total_stars %></small></h4>
+<h4>Avg Stars: <small><%= user.average_stars.round(3) %></small></h4>
+
+<div id='repos-container'>
+  <%= render partial: 'repos', object: user.repos %>
+</div>
